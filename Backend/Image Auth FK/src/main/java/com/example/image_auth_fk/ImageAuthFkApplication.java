@@ -16,10 +16,10 @@ public class ImageAuthFkApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ImageAuthFkApplication.class, args);
-        File_Reader fr= new File_Reader("resources/imageKey.jpeg");
+        File_Reader fr= new File_Reader("resources/imageKey.jpeg");      //für Dateipfad Slashes statt Back-slashes -> anders als im File-Explorer
         System.out.println(fr.getPath());
         try {
-            File initialFile = new File("resources/imageKey.jpeg");
+            File initialFile = new File("resources/imageKey.jpeg");  //für Dateipfad Slashes statt Back-slashes -> anders als im File-Explorer
 
             final InputStream targetStream = new DataInputStream(new FileInputStream(initialFile));
 
