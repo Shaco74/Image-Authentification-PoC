@@ -11,6 +11,11 @@ public class ImageAuthFkApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ImageAuthFkApplication.class, args);
+        Converter converter = new Converter();
+        converter.setImagePath("resources/imageKey.jpeg");
+        converter.encode();
+        converter.decode();
+        System.out.println("finish");
     }
 
     @GetMapping
